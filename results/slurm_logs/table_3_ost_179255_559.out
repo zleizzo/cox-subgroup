@@ -1,0 +1,13 @@
+My experiment number is  559
+Load data
+Finished loading
+  X_adjust shape: (920, 1), X_subgp shape: (920, 1)
+Running method
+[1;31mIntegrityViolation Detected during Optimization:
+  ErrorContext: No model
+  Reason: No model found - either user-provided upper bound assumption was too strong, or there was a false convergence[0m
+
+----------------------------------------------
+[]
+----------------------------------------------
+Config table_3_ost, job 559 failed. Logged to logs/table_3_ost/559_err.txt.

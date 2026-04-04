@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/zach/cox-subgroup/experiments/run_slurm.py", line 47, in main
+    run_experiment(method, dataset, seed, subgp_cols, adjust_cols, config_name, task_id, dataset_hyper, R_star, **kwargs)
+  File "/home/zach/cox-subgroup/src/evaluation/run_experiment.py", line 65, in run_experiment
+    results = alg_job(X_adjust, X_subgp, Y, B_subgp, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zach/cox-subgroup/src/algs/ost.py", line 72, in ost_job
+    boxes_and_betas = get_best_boxes(X_adjust, X_subgp, Y, boxes, num_subgroups, epe_metric)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zach/cox-subgroup/src/utils/subgroup.py", line 183, in get_best_boxes
+    results = [(boxes[i], betas[i]) for i in ranking_by_metric[:num_subgroups]]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zach/cox-subgroup/src/utils/subgroup.py", line 183, in <listcomp>
+    results = [(boxes[i], betas[i]) for i in ranking_by_metric[:num_subgroups]]
+                ~~~~~^^^
+IndexError: list index out of range
