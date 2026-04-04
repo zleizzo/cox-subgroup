@@ -52,7 +52,7 @@ def run_experiment(method, dataset, seed, subgp_cols, adjust_cols, config_name, 
     start = time.time()
     alg_job = METHOD_DICT[method]
 
-    print("Load data", flush=True)
+    print(f"Load data: dataset={dataset}, adjust_cols={adjust_cols}, subgp_cols={subgp_cols}, seed={seed}, n={dataset_hyper}", flush=True)
     X_adjust, X_subgp, Y, X_adjust_test, X_subgp_test, Y_test, B_subgp, scaler = load_data(
         dataset, adjust_cols, subgp_cols, seed, n=dataset_hyper
     )
