@@ -49,7 +49,7 @@ def main():
         # capture traceback so you know what failed
         tb_str = traceback.format_exc()
         log_failure(task_id, tb_str)
-        print(f"Config {config_name}, job {task_id} failed. Logged to logs/{config_name}/{task_id}_err.txt.")
+        print(f"Config {config_name}, job {task_id} failed. Logged to results/{config_name}/logs/{task_id}_err.txt.")
         sys.exit(1)  # let SLURM know it failed
 
     
