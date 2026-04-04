@@ -4,6 +4,7 @@ from algs.ddgroup import ddgroup_job, c_ind_ddgroup_job, pl_ddgroup_job, no_exp_
 from algs.prim import prim_job
 from algs.random import random_job
 from algs.survival_tree import survival_tree_job
+from algs.ost import ost_job
 from sksurv.datasets import load_veterans_lung_cancer, load_gbsg2, load_aids, load_whas500
 import numpy as np
 
@@ -18,6 +19,7 @@ METHOD_DICT = {
     'prim': prim_job,
     'random': random_job,
     'survival_tree': survival_tree_job,
+    'ost': ost_job,
 }
 
 METRIC_COLS = [
@@ -80,6 +82,10 @@ max_splits_per_feature = 100
 st_min_leaf_sizes = [5 * i for i in range(1, 11)]
 st_max_depth = 10
 
+ost_regularization_values = [0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1.0]
+ost_depth_budget = 5
+ost_min_captured_points = 7
+
 peeling_fracs = np.linspace(0.01, 0.25, 25).tolist()
 min_support_sizes = [0.01, 0.02, 0.04, 0.08]
 
@@ -122,4 +128,10 @@ METHOD_HYPERS = {
         'min_samples_leaf': k,
         'num_subgroups': 1
     } for k in st_min_leaf_sizes],
+    'ost': [{
+        'regularization': r,
+        'minimum_captured_points': ost_min_captured_points,
+        'depth_budget': ost_depth_budget,
+        'num_subgroups': 1
+    } for r in ost_regularization_values],
 }

@@ -47,7 +47,8 @@ METHOD_HYPERPARAM_COLS = {
     'prim': ['peeling_frac', 'min_support_size', 'num_subgroups'],
     'survival_tree': ['max_depth', 'min_samples_leaf', 'num_subgroups'],
     'random': ['num_subgroups', 'seeds'],
-    'base': []
+    'base': [],
+    'ost': ['regularization', 'minimum_captured_points', 'depth_budget', 'num_subgroups'],
 }
 
 # Columns to remove from final output

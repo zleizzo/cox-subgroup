@@ -11,6 +11,7 @@ from algs.ddgroup import *
 from algs.prim import *
 from algs.random import *
 from algs.survival_tree import *
+from algs.ost import *
 from utils.subgroup import *
 from utils.metrics import *
 from evaluation.run_experiment import run_experiment, get_job_list
