@@ -1,0 +1,15 @@
+My experiment number is  23
+Load data
+Finished loading
+  X_adjust shape: (109, 1), X_subgp shape: (109, 1)
+Running method
+osst reported successful execution
+training completed. 0.105 seconds.
+bounds: [0.093505..0.093505] (0.000000) IBS loss = 0.083505, iterations=7098
+Finished running
+Run eval
+Finished eval
+Saving data
+Save completed
+Saving runtime
+Save completed

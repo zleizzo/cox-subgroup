@@ -1,0 +1,9 @@
+My experiment number is  170
+Load data
+Finished loading
+  X_adjust shape: (400, 1), X_subgp shape: (400, 1)
+Running method
+osst reported successful execution
+training completed. 2.072 seconds.
+bounds: [0.163392..0.163392] (0.000000) IBS loss = 0.149392, iterations=63637
+Config table_3_ost, job 170 failed. Logged to logs/table_3_ost/170_err.txt.

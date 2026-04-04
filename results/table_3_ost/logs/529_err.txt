@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/zach/cox-subgroup/experiments/run_slurm.py", line 47, in main
+    run_experiment(method, dataset, seed, subgp_cols, adjust_cols, config_name, task_id, dataset_hyper, R_star, **kwargs)
+  File "/home/zach/cox-subgroup/src/evaluation/run_experiment.py", line 65, in run_experiment
+    results = alg_job(X_adjust, X_subgp, Y, B_subgp, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zach/cox-subgroup/src/algs/ost.py", line 69, in ost_job
+    model.fit(X_subgp_df, event, times)
+  File "/home/ml/zach/anaconda3/envs/survival/lib/python3.11/site-packages/osst/model/osst.py", line 108, in fit
+    self.__train__(X, event, y)
+  File "/home/ml/zach/anaconda3/envs/survival/lib/python3.11/site-packages/osst/model/osst.py", line 72, in __train__
+    raise Exception("Error: OSST encountered an error while training")
+Exception: Error: OSST encountered an error while training
