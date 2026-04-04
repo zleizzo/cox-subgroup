@@ -64,6 +64,7 @@ def ost_job(X_adjust, X_subgp, Y, B, num_subgroups, regularization, minimum_capt
         "depth_budget": depth_budget,
         "minimum_captured_points": minimum_captured_points,
         "verbose": False,
+        "time_limit": 600,
     }
     model = OSST(config)
     model.fit(X_subgp_df, event, times)
