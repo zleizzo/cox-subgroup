@@ -125,7 +125,7 @@ def load_data(dataset, adjust_cols, subgp_cols, seed, n=None):
 
     elif dataset == 'nonlinear':
         assert n is not None, "n must be specified for nonlinear dataset"
-        d = 2
+        d = max(max(subgp_cols), max(adjust_cols)) + 1
 
         B = np.ones((2, d))
         B[0, :] *= -1
