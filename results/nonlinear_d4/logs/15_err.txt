@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/zach/cox-subgroup/experiments/run_slurm.py", line 47, in main
+    run_experiment(method, dataset, seed, subgp_cols, adjust_cols, config_name, task_id, dataset_hyper, R_star, **kwargs)
+  File "/home/zach/cox-subgroup/src/evaluation/run_experiment.py", line 56, in run_experiment
+    X_adjust, X_subgp, Y, X_adjust_test, X_subgp_test, Y_test, B_subgp, scaler = load_data(
+                                                                                 ^^^^^^^^^^
+  File "/home/zach/cox-subgroup/src/data/load.py", line 151, in load_data
+    X_adjust = X[:, adjust_cols]
+               ~^^^^^^^^^^^^^^^^
+IndexError: index 2 is out of bounds for axis 1 with size 2
