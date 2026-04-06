@@ -62,7 +62,7 @@ RANDOM_EPE = np.log(2) # EPE of random model
 COL_NAMES = SKSURV_COLS.copy()
 COL_NAMES['metabric'] = METABRIC_COLS.copy()
 COL_NAMES['nasa'] = NASA_TURBOFAN_COLS.copy()
-COL_NAMES['nonlinear'] = ['x0', 'x1']
+COL_NAMES['nonlinear'] = [f'x{i}' for i in range(10)]  # supports up to d=10
 
 
 
@@ -82,9 +82,9 @@ max_splits_per_feature = 100
 st_min_leaf_sizes = [5 * i for i in range(1, 11)]
 st_max_depth = 10
 
-ost_regularization_values = [0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1.0]
-ost_depth_budget = 5
-ost_min_captured_points = 7
+ost_regularization_values = np.linspace(0.01, 1., 100).tolist()
+ost_depth_budget = 6
+ost_min_captured_points = 10
 
 peeling_fracs = np.linspace(0.01, 0.25, 25).tolist()
 min_support_sizes = [0.01, 0.02, 0.04, 0.08]
