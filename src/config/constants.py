@@ -83,8 +83,8 @@ st_min_leaf_sizes = [5 * i for i in range(1, 11)]
 st_max_depth = 10
 
 ost_regularization_values = np.linspace(0.01, 1., 100).tolist()
-ost_depth_budget = 6
-ost_min_captured_points = 10
+ost_depth_budget = 5 # Used 6 for previous runs
+ost_min_captured_points = 7 # Used 10 for previous runs
 
 peeling_fracs = np.linspace(0.01, 0.25, 25).tolist()
 min_support_sizes = [0.01, 0.02, 0.04, 0.08]
